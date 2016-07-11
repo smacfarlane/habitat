@@ -22,7 +22,6 @@ use std;
 use std::env;
 use std::fmt;
 use std::fs::File;
-use std::os::unix;
 use std::path::{Path, PathBuf};
 use std::string::ToString;
 use std::io::prelude::*;

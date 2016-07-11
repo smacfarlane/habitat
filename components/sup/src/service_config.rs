@@ -23,7 +23,7 @@ use std::io::prelude::*;
 use ansi_term::Colour::Purple;
 use rustc_serialize::Encodable;
 use toml;
-use handlebars::{Handlebars, JsonRender};
+use handlebars::Handlebars;
 
 use common::gossip_file::GOSSIP_TOML;
 use census::{Census, CensusList};
@@ -521,7 +521,7 @@ impl Pkg {
 
         let (default_svc_user, default_svc_group) = match hab_users::get_user_and_group(&pkg_install) {
             Ok((svc_user, svc_group)) => (svc_user, svc_group),
-            Err(e) => {
+            Err(_e) => {
                 // TODO
                 panic!("Can't get default service and user");
             }
