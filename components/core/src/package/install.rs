@@ -630,7 +630,7 @@ impl PackageInstall {
     /// * A metafile could not be found
     /// * Contents of the metafile could not be read
     /// * Contents of the metafile are unreadable or malformed
-    fn read_metafile(&self, file: MetaFile) -> Result<String> {
+    pub fn read_metafile(&self, file: MetaFile) -> Result<String> {
         read_metafile(&self.installed_path, file)
     }
 
